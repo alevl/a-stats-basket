@@ -125,20 +125,14 @@
                                             <th>
                                             </th>
                                             <th class="text-center">
-                                                <span style="font-size: 1em"><strong>C</strong></span>
-                                            </th>
-                                            <th class="text-center">
-                                                <span style="font-size: 1em"><strong>H</strong></span>
-                                            </th>
-                                            <th class="text-center">
-                                                <span style="font-size: 1em"><strong>E</strong></span>
+                                                <span style="font-size: 1em"><strong>Puntos</strong></span>
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td width="45" class="text-center" >
-                                                <span style="font-size: 1.3em"><img class="h-10 w-10 rounded-full" src="{{asset('storage/sistema/logo.png')}}" alt=""></span>
+                                                <span style="font-size: 1.3em"><img class="h-10 w-10 rounded-full" src="{{asset('storage/sistema/favicon.png')}}" alt=""></span>
                                             </td>
                                             <td class="text-left p-0">
                                                 <span class="ml-2 text-left" style="font-size: 1em"><strong>{{ $juego->calendario_visita->nombre }}</strong></span>
@@ -146,16 +140,10 @@
                                             <td class="text-center p-0">
                                                 <span style="font-size: 1.7em;">{{ $juego->anotacion_visita }}</span>
                                             </td>
-                                            <td class="text-center p-0">
-                                                <span style="font-size: 1.7em">{{ $juego->hits_visita }}</span>
-                                            </td>
-                                            <td class="text-center p-0">
-                                                <span style="font-size: 1.7em">{{ $juego->errores_visita }}</span>
-                                            </td>
                                         </tr>
                                         <tr>
                                             <td width="45" class="text-center" >
-                                                <span style="font-size: 1.3em"><img class="h-10 w-10 rounded-full" src="{{asset('storage/sistema/logo.png')}}" alt=""></span>
+                                                <span style="font-size: 1.3em"><img class="h-10 w-10 rounded-full" src="{{asset('storage/sistema/favicon.png')}}" alt=""></span>
                                             </td>
                                             <td class="text-left p-0">
                                                 <span class="ml-2 text-left" style="font-size: 1em"><strong>{{ $juego->calendario_casa->nombre }}</strong></span>
@@ -163,18 +151,12 @@
                                             <td class="text-center p-0">
                                                 <span style="font-size: 1.7em;">{{ $juego->anotacion_casa }}</span>
                                             </td>
-                                            <td class="text-center p-0">
-                                                <span style="font-size: 1.7em">{{ $juego->hits_casa }}</span>
-                                            </td>
-                                            <td class="text-center p-0">
-                                                <span style="font-size: 1.7em">{{ $juego->errores_casa }}</span>
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 my-2 p-2 rounded mt-2">
                                     <div class="flex items-center mt-2">
-                                        @if($juego->bat_destacado_id <> '')
+                                        @if($juego->visita_destacado_id <> '')
                                             <a href="#" class="relative block">
                                                 <img alt="profil" src="{{asset('storage/sistema/jugador.png')}}" class="mx-auto object-cover rounded-full h-10 w-10 "/>
                                             </a>
@@ -183,13 +165,13 @@
                                                     {{ $juego->calendario_bateador->nombre }}
                                                 </p>
                                                 <p class="text-gray-700 dark:text-gray-700">
-                                                    {{ $juego->texto_bateador }}
+                                                    {{ $juego->texto_visita }}
                                                 </p>
                                             </div>
                                         @endif
                                     </div>
                                     <div class="flex items-center mt-2">
-                                        @if($juego->pit_destacado_id <> '')
+                                        @if($juego->casa_destacado_id <> '')
                                             <a href="#" class="relative block">
                                                 <img alt="profil" src="{{asset('storage/sistema/jugador.png')}}" class="mx-auto object-cover rounded-full h-10 w-10 "/>
                                             </a>
@@ -198,7 +180,7 @@
                                                     {{ $juego->calendario_pitcher->nombre }}
                                                 </p>
                                                 <p class="text-gray-700 dark:text-gray-700">
-                                                    {{ $juego->texto_pitcher }}
+                                                    {{ $juego->texto_casa }}
                                                 </p>
                                             </div>
                                         @endif

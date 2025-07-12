@@ -19,7 +19,7 @@ class Posicione extends Model
         'ganados',
         'perdidos',
         'empatados',
-        'porcentaje',
+        'puntos',
     ];
 
 

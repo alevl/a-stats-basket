@@ -11,9 +11,9 @@ class Calendario extends Model
     use HasFactory;
 
     protected $fillable = [
-        'numero_juego',
         'fecha_juego',
         'hora_juego',
+        'numero_juego',
         'estadio_id',
         'categoria_id',
         'campeonato_id',
@@ -22,10 +22,10 @@ class Calendario extends Model
         'casa_id',
         'anotacion_visita',
         'anotacion_casa',
-        'hits_visita',
-        'hits_casa',
-        'errores_visita',
-        'errores_casa',
+        'rebotes_visita',
+        'rebotes_casa',
+        'asistencias_visita',
+        'asistencias_casa',
         'anotador_id',
         'arbitro1_id',
         'arbitro2_id',
@@ -33,11 +33,12 @@ class Calendario extends Model
         'arbitro4_id',
         'observacion',
         'tiempo',
-        'bat_destacado',
-        'pit_destacado',
-        'texto_bateador',
-        'texto_pitcher',
+        'visita_destacado_id',
+        'casa_destacado_id',
+        'texto_visita',
+        'texto_casa',
         'condicion',
+        'facturado_id',
         'fecha_invertida',
     ];
 
@@ -59,11 +60,11 @@ class Calendario extends Model
     }
     public function calendario_bateador()
     {
-        return $this->belongsTo(Jugadore::class, 'bat_destacado_id');
+        return $this->belongsTo(Jugadore::class, 'visita_destacado_id');
     }
     public function calendario_pitcher()
     {
-        return $this->belongsTo(Jugadore::class, 'pit_destacado_id');
+        return $this->belongsTo(Jugadore::class, 'casa_destacado_id');
     }
     public function calendario_anotador()
     {
