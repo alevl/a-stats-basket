@@ -20,7 +20,7 @@
             </div>
 
             <div class="mt-6">
-                <span class="text-2xl font-semi-bold leading-normal">Numeritos</span>
+                <span class="text-2xl font-semi-bold leading-normal">Mis Temporadas</span>
             </div>
             <div style="overflow-x:auto">
                 <table class="w-full mt-4 table bg-white rounded-lg shadow mb-12" style="font-size: 0.8em">
